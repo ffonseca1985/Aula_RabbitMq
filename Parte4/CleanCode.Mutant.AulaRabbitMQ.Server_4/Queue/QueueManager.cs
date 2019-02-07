@@ -3,13 +3,14 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 
-namespace CleanCode.Mutant.AulaRabbitMQ.Server_3.Queue
+namespace CleanCode.Mutant.AulaRabbitMQ.Server_4.Queue
 {
     public class QueueManager
     {
         string _hostName = "localhost";
         string _queueName = "queue_mutant";
-        string _exchange = "exchage_mutant_fanout";
+        string _exchange = "exchage_mutant_direct";
+        string _key = "key_mutant";
 
         public void Receiver()
         {
@@ -22,13 +23,13 @@ namespace CleanCode.Mutant.AulaRabbitMQ.Server_3.Queue
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.ExchangeDeclare(exchange: _exchange, type: ExchangeType.Fanout);
+                    channel.ExchangeDeclare(exchange: _exchange, type: ExchangeType.Direct);
 
                     _queueName = channel.QueueDeclare().QueueName;
                     channel.QueueBind(
                               queue: _queueName,
                               exchange: _exchange,
-                              routingKey: "");
+                              routingKey: _key);
 
 
                     var consumer = new EventingBasicConsumer(channel);

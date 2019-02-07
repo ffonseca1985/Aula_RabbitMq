@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CleanCode.Mutant.AulaRabbitMQ.Client_3.Queue
+namespace CleanCode.Mutant.AulaRabbitMQ.Client_4.Queue
 {
     using RabbitMQ.Client;
 
     public class QueueManager
     {
         string _hostName = "localhost";
-        string _queueName = "queue_mutant";
-        string _exchange = "exchage_mutant_fanout";
+        string _exchange = "exchage_mutant_direct";
+        string _key = "key_mutant";
 
         public void Send(string message) 
         {
@@ -26,13 +26,13 @@ namespace CleanCode.Mutant.AulaRabbitMQ.Client_3.Queue
                     properties.Persistent = true;
 
                     //manda para todas as filas que tem uma ligação com a 
-                    channel.ExchangeDeclare(exchange: _exchange, type: ExchangeType.Fanout);
+                    channel.ExchangeDeclare(exchange: _exchange, type: ExchangeType.Direct);
 
                     var body = Encoding.UTF8.GetBytes(message);
 
                     channel.BasicPublish(
                         exchange: _exchange,
-                        routingKey: "",
+                        routingKey: _key,
                         basicProperties: properties,
                         body: body);
                 }
