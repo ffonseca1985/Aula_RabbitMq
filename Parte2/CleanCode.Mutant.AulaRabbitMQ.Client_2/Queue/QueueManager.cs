@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CleanCode.Mutant.AulaRabbitMQ.Client.Queue
+namespace CleanCode.Mutant.AulaRabbitMQ.Client_2.Queue
 {
     using RabbitMQ.Client;
 
