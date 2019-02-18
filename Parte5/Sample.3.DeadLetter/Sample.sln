@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{7306E45C-AD92-4648-8572-258C8E59DF70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeadLetterQueueProcessor", "DeadLetterQueueProcessor\DeadLetterQueueProcessor.csproj", "{7202B7A7-31E9-4737-820C-EC8355A26FB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientUI", "ClientUI\ClientUI.csproj", "{15EC5640-4BD6-471A-91C0-6259D78DA6C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF72B39D-2A65-4C36-9465-CCF46AEB3C2B}"
+	ProjectSection(SolutionItems) = preProject
+		SetupRabbitMQ.bat = SetupRabbitMQ.bat
+		SetupRabbitMQ.ps1 = SetupRabbitMQ.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C3210792-1DD8-4C8D-9C4C-11754DA5354D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7306E45C-AD92-4648-8572-258C8E59DF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7306E45C-AD92-4648-8572-258C8E59DF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7306E45C-AD92-4648-8572-258C8E59DF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7306E45C-AD92-4648-8572-258C8E59DF70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7202B7A7-31E9-4737-820C-EC8355A26FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7202B7A7-31E9-4737-820C-EC8355A26FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7202B7A7-31E9-4737-820C-EC8355A26FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7202B7A7-31E9-4737-820C-EC8355A26FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15EC5640-4BD6-471A-91C0-6259D78DA6C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EC5640-4BD6-471A-91C0-6259D78DA6C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EC5640-4BD6-471A-91C0-6259D78DA6C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EC5640-4BD6-471A-91C0-6259D78DA6C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

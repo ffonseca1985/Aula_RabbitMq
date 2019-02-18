@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E7F8E768-4838-4983-9740-69CB981CB7DF}"
+	ProjectSection(SolutionItems) = preProject
+		SetupRabbitMQ.bat = SetupRabbitMQ.bat
+		SetupRabbitMQ.ps1 = SetupRabbitMQ.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{531F00C0-9B3A-472B-86E5-98C25CEDD68E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinClient", "WinClient\WinClient.csproj", "{9EFE8E71-FF5E-443A-B738-790395E5080E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EFE8E71-FF5E-443A-B738-790395E5080E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFE8E71-FF5E-443A-B738-790395E5080E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFE8E71-FF5E-443A-B738-790395E5080E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFE8E71-FF5E-443A-B738-790395E5080E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
